@@ -1,21 +1,27 @@
-Line plot :
-from matplotlib import pyplot as plt x 
-= [5, 2, 9, 4, 7]
-y = [10, 5, 8, 4, 2]
-plt.plot(x,y) plt.show()
-Bar plot :
-from matplotlib import pyplot as plt x 
-= [5, 2, 9, 4, 7]
-y = [10, 5, 8, 4, 2]
-plt.bar(x,y) plt.show()
-Histogram :
-from matplotlib import pyplot as plt y 
-y= [10, 5, 8, 4, 2]
-plt.hist(y) plt.show()
-Scatter Plot :
-from matplotlib 
-import pyplot as plt 
+from matplotlib import pyplot as plt
+
 x = [5, 2, 9, 4, 7]
 y = [10, 5, 8, 4, 2]
-plt.scatter(x, y) 
+
+# Line Plot
+plt.subplot(2,2,1)
+plt.plot(x, y)
+plt.title("Line Plot")
+
+# Bar Plot
+plt.subplot(2,2,2)
+plt.bar(x, y)
+plt.title("Bar Plot")
+
+# Histogram
+plt.subplot(2,2,3)
+plt.hist(y)
+plt.title("Histogram")
+
+# Scatter Plot
+plt.subplot(2,2,4)
+plt.scatter(x, y)
+plt.title("Scatter Plot")
+
+plt.tight_layout()
 plt.show()
